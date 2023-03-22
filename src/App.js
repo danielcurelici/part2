@@ -74,7 +74,7 @@ const App = (props) => {
                     setTimeout(() => setNewMessage(null), 5000)
                 })
                 .catch(error => {
-                    setNewError(`Error ${error.name}`)
+                    setNewError(error.response.data.error)
                     setTimeout(() => setNewError(null), 5000)
                 })
             }
